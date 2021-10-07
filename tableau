@@ -1,0 +1,23 @@
+let tableau = [1,2,3,4,5,6,7,8,9];
+
+function Even (val) {  // on a crée la fonction qui nous donne les nombres paires
+  return (val%2 == 0);
+  }
+  
+  function Odd (val) {  // on a crée la fonction qui nous donne les nombres paires
+  return (val%2 == 0);
+  }
+  
+
+function fonctiontableau(tableau, test) { //fonction principale, on a une référence 
+  let tab=[];
+  for(let i=0; i <= tableau.length ;i++) { //on parcours tout le tableau
+    if (test(tableau[i])) {
+      tab.push(tableau[i]);
+    }
+
+}
+return tab; // on doit retourner le nouveau tableau crée à la fin 
+}
+
+let newtab = fonctiontableau(tableau,Even); // on faut l'appel par référence
